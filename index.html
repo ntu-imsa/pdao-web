@@ -57,10 +57,12 @@
 									<h2>Scoreboard</h2>
 								</header>
 								<div id="scoreboard_table"></div>
+								<div id="scroeboard_updated"></div>
 								<script type="text/javascript">
 								var refresh = function(){
+									var dateNow = Date.now();
 									$.ajax({
-									  url: "summary_demo.html?" + Date.now()
+									  url: "summary_demo.html?" + dateNow
 									}).done(function(data) {
 									  $("#scoreboard_table").html(data);
 										$("td").addClass('score-red');
@@ -71,10 +73,12 @@
 										}
 										$("tr td:nth-last-child(1)").removeClass();
 										$("tbody tr:nth-last-child(1) td").removeClass();
+									  var dd = new Date(dateNow);
+									  $("#scroeboard_updated").html("Last updated: " + dd.toString());
 									});
 								}
 								refresh();
-								setInterval(refresh, 300);
+								setInterval(refresh, 3000);
 								</script>
 								<section>
 
