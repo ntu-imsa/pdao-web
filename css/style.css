@@ -1,5 +1,4 @@
 @charset 'UTF-8';
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic');
 @import url('font-awesome.min.css');
 
 /*
@@ -35,7 +34,7 @@
 
 	body,input,textarea,select
 	{
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: 'Source Sans Pro', 'Apple LiGothic', 'WenQuanYi Micro Hei', 'Microsoft JhengHei', 'Arial Unicode MS', sans-serif;
 		font-weight: 300;
 		color: #777777;
 	}
