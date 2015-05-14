@@ -56,11 +56,26 @@
 								<header>
 									<h2>Scoreboard</h2>
 								</header>
-								<p>
-									Phasellus enim sapien, blandit ullamcorper elementum eu, condimentum eu elit.
-									Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-									luctus elit eget interdum.
-								</p>
+								<div id="scoreboard_table"></div>
+								<script type="text/javascript">
+								var refresh = function(){
+									$.ajax({
+									  url: "summary_demo.html?" + Date.now()
+									}).done(function(data) {
+									  $("#scoreboard_table").html(data);
+										$("td").addClass('score-red');
+										$("td:contains('/')").removeClass('score-red').addClass('score-green');
+										$("td:contains('0/--')").removeClass('score-red').removeClass('score-green');
+										for(var i = 1; i <= 4; i++){
+											$("tr td:nth-child(" + i + ")").removeClass();
+										}
+										$("tr td:nth-last-child(1)").removeClass();
+										$("tbody tr:nth-last-child(1) td").removeClass();
+									});
+								}
+								refresh();
+								setInterval(refresh, 300);
+								</script>
 								<section>
 
 								</section>

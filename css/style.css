@@ -502,3 +502,11 @@
 				{
 					display: none;
 				}
+
+		.score-red{
+			background-color: red;
+		}
+
+		.score-green{
+			background-color: #32cd32;
+		}
