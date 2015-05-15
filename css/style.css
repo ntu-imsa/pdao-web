@@ -514,3 +514,7 @@
 		.score-green{
 			background-image: linear-gradient(to bottom, #17E500, #00BF0D);
 		}
+
+		.score-first{
+			background-image: linear-gradient(to bottom, #02A623, #45BA36);
+		}

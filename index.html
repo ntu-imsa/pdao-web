@@ -60,6 +60,11 @@
 								<div id="scoreboard_table" style="zoom:0.7"></div>
 								<div id="scroeboard_updated" style="zoom:0.7"></div>
 								<script type="text/javascript">
+								if (typeof String.prototype.endsWith !== 'function') {
+									String.prototype.endsWith = function(suffix) {
+								  	return this.indexOf(suffix, this.length - suffix.length) !== -1;
+								  };
+								}
 								var refresh = function(){
 									var dateNow = Date.now();
 									$.ajax({
@@ -68,14 +73,25 @@
 									  $("#scoreboard_table").html(data);
 										$("td").addClass('score-red');
 										$("td:contains('/')").removeClass('score-red').addClass('score-green');
-										$("td:contains('0/--')").removeClass();
 										for(var i = 1; i <= 4; i++){
 											$("tr td:nth-child(" + i + ")").removeClass();
 										}
 										$("tr td:nth-last-child(1)").removeClass();
-										$("tbody tr:nth-child(2) td").removeClass();
 										$("tbody tr:nth-last-child(1) td").removeClass();
 										$("tbody tr:nth-last-child(2) td").removeClass();
+										$("tbody tr:nth-last-child(3) td").removeClass();
+										$("tbody tr:nth-last-child(4)").empty();
+										var cols = $("#scoreboard_table").find('tr')[0].cells.length;
+										var rows = $('#scoreboard_table tr').length;
+										for(var i = 5; i < cols; i++){
+											var first_ac = $("tbody tr:nth-last-child(2) td:nth-child(" + i + ")").html();
+											for(var j = 2; j < rows - 3; j++){
+												if($("tbody tr:nth-child(" + j + ") td:nth-child(" + i + ")").html().endsWith("/" + first_ac)){
+													$("tbody tr:nth-child(" + j + ") td:nth-child(" + i + ")").removeClass().addClass('score-first');
+												}
+											}
+										}
+										$("td:contains('0/--')").removeClass();
 									  var dd = new Date(dateNow);
 									  $("#scroeboard_updated").html("Last updated: " + dd.toString());
 									});
