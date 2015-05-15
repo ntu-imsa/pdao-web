@@ -63,7 +63,7 @@
 								var refresh = function(){
 									var dateNow = Date.now();
 									$.ajax({
-									  url: "summary_demo.html?" + dateNow
+									  url: "scoreboard_data.php?" + dateNow
 									}).done(function(data) {
 									  $("#scoreboard_table").html(data);
 										$("td").addClass('score-red');
