@@ -59,10 +59,8 @@
 								<header>
 									<h2>Scoreboard</h2>
 								</header>
-								<div id="scoreboard_table" style="zoom:0.7">
-
-								</div>
-								<div id="scroeboard_updated" style="zoom:0.7"></div>
+								<div id="scoreboard_table" style="zoom:0.7"><span style="font-size: 2800px">&nbsp;</span></div>
+								<div id="scoreboard_updated" style="zoom:0.7"></div>
 								<script type="text/javascript">
 								if (typeof String.prototype.endsWith !== 'function') {
 									String.prototype.endsWith = function(suffix) {
@@ -97,7 +95,7 @@
 										}
 										$("td:contains('0/--')").removeClass();
 									  var dd = new Date(dateNow);
-									  $("#scroeboard_updated").html("Last updated: " + dd.toString());
+									  $("#scoreboard_updated").html("Last updated: " + dd.toString());
 									});
 								}
 								refresh();
