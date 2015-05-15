@@ -3,6 +3,7 @@ require 'config.php';
 $source = DEMO_MODE == 1 ? 'summary_demo.html' : PC2_SUMMARY_LOCATION;
 $data = file_get_contents($source);
 $data = explode('</TABLE>', $data);
+// $lu_data = $data[1];
 $data = explode('<TABLE border="0">', $data[0]);
 $data = explode("<tr>\r\n<td></td><td></td><td></td><td></td><td>\r\n<center>", $data[1]);
 $data[1] = explode("</center>\r\n</td>\r\n</tr>", $data[1]);
@@ -29,6 +30,8 @@ for($i = 0; $i < 3; $i++){
 	}
 	$sum .= $col;
 }
+// $lu_data = explode('Last updated', $lu_data);
+// $lu_data = explode('<', $lu_data[1])[0];
 // print_r($data);
 $table = $data[0].$data[1][1].$sum;
 echo '<TABLE>'.$table.'</TABLE>';
