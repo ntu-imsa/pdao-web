@@ -59,8 +59,17 @@
 								<header>
 									<h2>Scoreboard</h2>
 								</header>
-								<div id="scoreboard_table" style="zoom:0.7"><span style="font-size: 2800px">&nbsp;</span></div>
+								<div id="scoreboard_table" style="zoom:0.7"><span style="font-size: 3200px">&nbsp;</span></div>
 								<div id="scoreboard_updated" style="zoom:0.7"></div>
+<?php
+if(ONLINE == 1){
+?>
+<br>
+								<h2>Realtime Chat for Audiences</h2>
+								<div id="pdao_chat"></div>
+<?php
+}
+?>
 								<script type="text/javascript">
 								if (typeof String.prototype.endsWith !== 'function') {
 									String.prototype.endsWith = function(suffix) {
@@ -103,6 +112,7 @@
 if(ONLINE == 1){
 ?>
 								setInterval(refresh, 3000);
+								$('#pdao_chat').html('<iframe src="<?=CHAT_URL ?>" style="width: 100%; height: 500px"></iframe>');
 <?php
 }
 ?>
