@@ -1,4 +1,6 @@
-<!DOCTYPE HTML>
+<?php
+	include 'config.php';
+?><!DOCTYPE HTML>
 <html>
 	<head>
 		<title>NTUIM PDAO 2015 - 台大資管系 程式設計與最佳化競賽</title>
@@ -57,7 +59,9 @@
 								<header>
 									<h2>Scoreboard</h2>
 								</header>
-								<div id="scoreboard_table" style="zoom:0.7"></div>
+								<div id="scoreboard_table" style="zoom:0.7">
+
+								</div>
 								<div id="scroeboard_updated" style="zoom:0.7"></div>
 								<script type="text/javascript">
 								if (typeof String.prototype.endsWith !== 'function') {
