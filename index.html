@@ -68,12 +68,14 @@
 									  $("#scoreboard_table").html(data);
 										$("td").addClass('score-red');
 										$("td:contains('/')").removeClass('score-red').addClass('score-green');
-										$("td:contains('0/--')").removeClass('score-red').removeClass('score-green');
+										$("td:contains('0/--')").removeClass();
 										for(var i = 1; i <= 4; i++){
 											$("tr td:nth-child(" + i + ")").removeClass();
 										}
 										$("tr td:nth-last-child(1)").removeClass();
+										$("tbody tr:nth-child(2) td").removeClass();
 										$("tbody tr:nth-last-child(1) td").removeClass();
+										$("tbody tr:nth-last-child(2) td").removeClass();
 									  var dd = new Date(dateNow);
 									  $("#scroeboard_updated").html("Last updated: " + dd.toString());
 									});
