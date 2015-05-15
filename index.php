@@ -97,7 +97,13 @@
 									});
 								}
 								refresh();
+<?php
+if(ONLINE == 1){
+?>
 								setInterval(refresh, 3000);
+<?php
+}
+?>
 								</script>
 								<section>
 
