@@ -28,7 +28,7 @@
 					<nav id="nav">
 						<a href="#me" class="icon fa-home active"><span>Home</span></a>
 						<a href="#scoreboard" class="icon fa-bar-chart"><span>Scoreboard</span></a>
-						<a href="#staff" class="icon fa-group"><span>Staff</span></a>
+						<a href="#credits" class="icon fa-group"><span>Credits</span></a>
 <!--						<a href="#contact" class="icon fa-envelope"><span>Contact</span></a> -->
 					</nav>
 
@@ -124,16 +124,18 @@ if(ONLINE == 1){
 
 
 						<!-- Staff -->
-							<article id="staff" class="panel">
+							<article id="credits" class="panel">
 								<header>
-									<h2>Staff</h2>
+									<h2>Credits</h2>
 								</header>
 								<p>
-									Phasellus enim sapien, blandit ullamcorper elementum eu, condimentum eu elit.
-									Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-									luctus elit eget interdum.
+									Advisor: rrro<br>
+									Organizer: bonnie<br>
+									Problems: bigelephant29, rilak<br>
+									Verifications: arbuztw, c2251393, eddy1021, magrady24, music960633, tzupengwang<br>
+									Website: shouko
 								</p>
-								<section>
+<!--								<section>
 									<div class="row">
 										<div class="4u">
 											<a href="#" class="image fit"><img src="images/pic01.jpg" alt=""></a>
@@ -178,7 +180,7 @@ if(ONLINE == 1){
 											<a href="#" class="image fit"><img src="images/pic12.jpg" alt=""></a>
 										</div>
 									</div>
-								</section>
+								</section> -->
 							</article>
 
 						<!-- Contact -->
