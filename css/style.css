@@ -502,10 +502,15 @@
 					display: none;
 				}
 
+    table{
+			text-align: center;
+			text-shadow: 2px 2px 2px white;
+		}
+
 		.score-red{
-			background-color: red;
+			background-image: linear-gradient(to bottom, #F63C3F, #AA0913);
 		}
 
 		.score-green{
-			background-color: #32cd32;
+			background-image: linear-gradient(to bottom, #17E500, #00BF0D);
 		}
