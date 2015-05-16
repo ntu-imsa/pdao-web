@@ -80,7 +80,7 @@ if(ONLINE == 1){
 								var refresh = function(){
 									var dateNow = Date.now();
 									$.ajax({
-									  url: "<?php echo (ONLINE == 1 ? 'scoreboard_data.php' : STATIC_SCOREBOARD); ?>?" + dateNow
+									  url: "scoreboard_data.php?" + dateNow
 									}).done(function(data) {
 									 	$("#scoreboard_table").html(data);
 										for(var i = teams.length - 1; i > 0; i--){
@@ -109,7 +109,7 @@ if(ONLINE == 1){
 										$("td:contains('/--')").removeClass().addClass('score-red');
 										$("td:contains('0/--')").removeClass();
 									  var dd = new Date(dateNow);
-									  $("#scoreboard_updated").html("Last updated: " + dd.toString());
+									  $("#scoreboard_updated").html("Last updated: " + <?php echo (ONLINE == 1 ? "dd.toString()" : '"'.LAST_UPDATE_TIME.'"'); ?>);
 									});
 								}
 								refresh();
@@ -119,8 +119,6 @@ if(ONLINE == 1){
 ?>
 	$('#pdao_chat').html('<iframe src="<?=CHAT_URL ?>" style="width: 100%; height: 500px"></iframe>');
 <?php
-}else{
-	echo LAST_UPDATE_TIME;
 }
 ?>
 								</script>
