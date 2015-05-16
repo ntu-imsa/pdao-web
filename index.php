@@ -59,8 +59,8 @@
 								<header>
 									<h2>Scoreboard</h2>
 								</header>
-								<div id="scoreboard_table" style="zoom:0.7"><span style="font-size: 3200px">&nbsp;</span></div>
-								<div id="scoreboard_updated" style="zoom:0.7"></div>
+								<div id="scoreboard_table" style="zoom:0.6"><span style="font-size: 3200px">&nbsp;</span></div>
+								<div id="scoreboard_updated" style="zoom:0.6"></div>
 <?php
 if(ONLINE == 1){
 ?>
