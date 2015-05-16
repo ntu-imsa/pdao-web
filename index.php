@@ -119,6 +119,8 @@ if(ONLINE == 1){
 ?>
 	$('#pdao_chat').html('<iframe src="<?=CHAT_URL ?>" style="width: 100%; height: 500px"></iframe>');
 <?php
+}else{
+	echo LAST_UPDATE_TIME;
 }
 ?>
 								</script>
