@@ -80,7 +80,7 @@ if(ONLINE == 1){
 								var refresh = function(){
 									var dateNow = Date.now();
 									$.ajax({
-									  url: "scoreboard_data.php?" + dateNow
+									  url: "<?php echo (ONLINE == 1 ? 'scoreboard_data.php' : STATIC_SCOREBOARD); ?>?" + dateNow
 									}).done(function(data) {
 									 	$("#scoreboard_table").html(data);
 										for(var i = teams.length - 1; i > 0; i--){
