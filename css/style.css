@@ -508,13 +508,16 @@
 		}
 
 		.score-red{
+			color: white;
 			background-image: linear-gradient(to bottom, #F63C3F, #AA0913);
 		}
 
 		.score-green{
-			background-image: linear-gradient(to bottom, #17E500, #00BF0D);
+			color: black;
+			background-image: linear-gradient(to bottom, palegreen, lightgreen);
 		}
 
 		.score-first{
-			background-image: linear-gradient(to bottom, #02A623, #45BA36);
+			color: white;
+			background-image: linear-gradient(to bottom, mediumaquamarine, mediumseagreen);
 		}
