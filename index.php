@@ -77,7 +77,7 @@ if(ONLINE == 1){
 								  	return this.indexOf(suffix, this.length - suffix.length) !== -1;
 								  };
 								}
-								var teams = ['','梵平與梵平的快樂小夥伴', 'IM Hungry', '吃吃又吃吃，比賽當飯局', '暗黑霸破墮天倦哥安', '泰師拉茶', '我一不小心就', '程設助教與他快樂的夥伴們', '2分的逆襲', '小小兵好可愛', '不放手直到夢想到手', '我好喜歡香菇', '看到PDAO就更絕望啦', '英國藍你為什麼要欺騙我的感情', '林翰伸是小拉機', '丁丁4M', '不放手 直到AC到手', '智能吃飯糰'];	
+								var teams = ['','梵平與梵平的快樂小夥伴', 'IM Hungry', '吃吃又吃吃，比賽當飯局', '暗黑霸破墮天倦哥安', '泰師拉茶', '我一不小心就', '程設助教與他快樂的夥伴們', '2分的逆襲', '小小兵好可愛', '不放手直到夢想到手', '我好喜歡香菇', '看到PDAO就更絕望啦', '英國藍你為什麼要欺騙我的感情', '林翰伸是小拉機', '丁丁4M', '不放手 直到AC到手', '智能吃飯糰'];
 								var refresh = function(){
 									var dateNow = Date.now();
 									$.ajax({
@@ -109,6 +109,9 @@ if(ONLINE == 1){
 										}
 										$("td:contains('/--')").removeClass().addClass('score-red');
 										$("td:contains('0/--')").removeClass();
+										for(var i = 1; i < 2; i++){
+											$("td:contains('"+i+"0/--')").addClass('score-red');
+										}
 									  var dd = new Date(dateNow);
 									  $("#scoreboard_updated").html("Last updated: " + <?php echo (ONLINE == 1 ? "dd.toString()" : '"'.LAST_UPDATE_TIME.'"'); ?>);
 									});
@@ -247,7 +250,7 @@ if(ONLINE == 1){
 	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 	ga('create', 'UA-45786123-2', 'auto');
- 
+
 	ga('send', 'pageview');
 </script>
 
