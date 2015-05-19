@@ -28,6 +28,7 @@
 					<nav id="nav">
 						<a href="#me" class="icon fa-home active"><span>Home</span></a>
 						<a href="#scoreboard" class="icon fa-bar-chart"><span>Scoreboard</span></a>
+						<a href="#videos" class="icon fa-video-camera"><span>Videos</span></a>
 						<a href="#credits" class="icon fa-group"><span>Credits</span></a>
 <!--						<a href="#contact" class="icon fa-envelope"><span>Contact</span></a> -->
 					</nav>
@@ -186,6 +187,13 @@ if(ONLINE == 1){
 										</div>
 									</div>
 								</section> -->
+							</article>
+							<article id="videos" class="panel">
+								<header>
+									<h2>Videos</h2>
+								</header>
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/u8_LSNUk5jM" frameborder="0" allowfullscreen></iframe><br><br>
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/FiQSIpGJN20" frameborder="0" allowfullscreen></iframe>
 							</article>
 
 						<!-- Contact -->
